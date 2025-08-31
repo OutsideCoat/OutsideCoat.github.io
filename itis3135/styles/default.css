@@ -1,0 +1,63 @@
+/* styles/default.css */
+
+/* General page styling */
+body {
+  font-family: Verdana, Arial, sans-serif;
+  background-color: #fdfdfd;
+  color: #222;
+  margin: 20px;
+}
+
+/* Headings */
+h1 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-size: 1.2em;
+  margin-top: 1em;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.2em;
+}
+
+/* Navigation links */
+nav a {
+  color: #006699; /* not default blue/purple */
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+nav a:hover {
+  color: #cc3300; /* hover color */
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  body {
+    margin: 10px;
+    font-size: 0.95em;
+  }
+
+  nav a {
+    display: block;
+    margin: 4px 0;
+  }
+}
+
+/* Headshot image styling */
+img {
+  max-width: 250px;   /* shrink image to fit page */
+  height: auto;       /* keeps proportions */
+  display: block;
+  margin: 10px 0;
+}
+
