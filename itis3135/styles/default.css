@@ -1,11 +1,21 @@
 /* styles/default.css */
 
 /* General page styling */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 body {
   font-family: Verdana, Arial, sans-serif;
   background-color: #fdfdfd;
   color: #222;
-  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;   /* keep header visible at the top */
+  align-items: center;           /* horizontal centering */
+  text-align: center;            /* center text by default */
+  min-height: 100vh;
 }
 
 /* Headings */
@@ -33,11 +43,28 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/* Layout: header, main, footer */
+header, footer {
+  width: 100%;          /* span full width */
+  flex: 0 0 auto;       /* don’t let flexbox shrink them away */
+}
+
+/* Center main content between header & footer */
+main {
+  flex: 0 0 auto;        /* don’t let it hog space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-block: auto;    /* vertical centering */
+}
+
 /* Footer */
 footer {
   margin-top: 20px;
   font-size: 0.9em;
   color: #555;
+  text-align: center;
 }
 
 /* Media query for smaller screens */
@@ -61,3 +88,47 @@ img {
   margin: 10px 0;
 }
 
+/* Figure/caption styling */
+.profile-figure {
+  margin: 0.5rem auto 0.75rem;
+  text-align: center;
+}
+.profile-figure figcaption {
+  font-style: italic;   /* requirement: italics via CSS */
+  margin-top: 0.2rem;
+}
+
+/* Keep lists readable and left-justified inside centered page layout */
+.content-block {
+  max-width: 800px;
+  width: 100%;
+  margin: 1rem auto;
+  text-align: left;
+}
+
+.info-list {
+  padding-left: 1.2rem;
+  line-height: 1.6;
+}
+
+.info-list > li {
+  margin: 0.4rem 0;
+}
+
+.info-list ul {
+  margin-top: 0.35rem;
+}
+
+/* Helpers */
+.display-line {
+  font-size: 1.8em;
+  font-weight: 600;
+  text-align: center;
+  margin: 0.3em 0 0.6em;
+}
+
+.favorite-quote {
+  margin-top: 1.2rem;
+  text-align: center;
+  font-size: 1.05em;
+}
