@@ -12,9 +12,9 @@ body {
   color: #222;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;   /* keep header visible at the top */
-  align-items: center;           /* horizontal centering */
-  text-align: center;            /* center text by default */
+  justify-content: flex-start;   
+  align-items: center;           
+  text-align: center;           
   min-height: 100vh;
 }
 
@@ -33,30 +33,30 @@ h2 {
 
 /* Navigation links */
 nav a {
-  color: #006699; /* not default blue/purple */
+  color: #006699; 
   text-decoration: none;
   margin: 0 5px;
 }
 
 nav a:hover {
-  color: #cc3300; /* hover color */
+  color: #cc3300; 
   text-decoration: underline;
 }
 
-/* Layout: header, main, footer */
+/* Layout */
 header, footer {
-  width: 100%;          /* span full width */
-  flex: 0 0 auto;       /* don’t let flexbox shrink them away */
+  width: 100%;         
+  flex: 0 0 auto;       
 }
 
-/* Center main content between header & footer */
+
 main {
-  flex: 0 0 auto;        /* don’t let it hog space */
+  flex: 0 0 auto;        
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-block: auto;    /* vertical centering */
+  margin-block: auto;    
 }
 
 /* Footer */
@@ -82,8 +82,8 @@ footer {
 
 /* Headshot image styling */
 img {
-  max-width: 250px;   /* shrink image to fit page */
-  height: auto;       /* keeps proportions */
+  max-width: 250px;  
+  height: auto;      
   display: block;
   margin: 10px 0;
 }
@@ -94,11 +94,11 @@ img {
   text-align: center;
 }
 .profile-figure figcaption {
-  font-style: italic;   /* requirement: italics via CSS */
+  font-style: italic;   
   margin-top: 0.2rem;
 }
 
-/* Keep lists readable and left-justified inside centered page layout */
+/* Keep lists readable */
 .content-block {
   max-width: 800px;
   width: 100%;
