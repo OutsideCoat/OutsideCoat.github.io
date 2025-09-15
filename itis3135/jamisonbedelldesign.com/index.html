@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jamison Bedell Design Co. | Services</title>
+    <!--
+      Color palette (Coolors): https://coolors.co/palette/0d1b2a-1b263b-415a77-778da9-e0e1dd-2ec4b6
+      Colors used:
+        0D1B2A (Rich Black) - page background
+        1B263B (Oxford Blue) - surfaces/header/footer
+        415A77 (Slate Blue)  - subtle strokes/dividers
+        778DA9 (Gray Blue)   - muted text
+        E0E1DD (Alabaster)   - primary text
+        2EC4B6 (Tiffany)     - accent
+    -->
+    <style>
+      :root {
+        --bg: #0d1b2a;
+        --surface: #1b263b;
+        --surface-2: #415a77;
+        --muted: #778da9;
+        --text: #e0e1dd;
+        --accent: #2ec4b6;
+      }
+
+      /* Base layout */
+      html, body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.65;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        min-height: 100vh;
+      }
+
+      /* Skip link for accessibility */
+      .skip-link {
+        position: absolute;
+        left: -9999px;
+      }
+      .skip-link:focus {
+        left: 1rem;
+        top: 1rem;
+        z-index: 1000;
+        background: var(--accent);
+        color: #053036;
+        padding: 0.5rem 0.75rem;
+        border-radius: 0.4rem;
+        text-decoration: none;
+      }
+
+      header {
+        background: var(--surface);
+        border-bottom: 1px solid #415a77;
+      }
+      header .wrap,
+      main .wrap,
+      footer .wrap {
+        max-width: 72ch;
+        margin: 0 auto;
+        padding: 1.25rem 1rem;
+      }
+
+      /* Brand row */
+      header .wrap { display: flex; align-items: center; justify-content: center; gap: 0.85rem; text-align: center; }
+      header img { display: block; }
+      h1 {
+        font-size: 1.6rem;
+        letter-spacing: 0.02em;
+        margin: 0;
+      }
+      h2 { font-size: 1.35rem; letter-spacing: 0.01em; margin: 0 0 0.5rem 0; text-align: center; }
+
+      main { background: var(--bg); }
+      main .intro {
+        color: var(--text);
+      }
+      main p {
+        margin: 0 0 1rem 0;
+      }
+
+      
+      main ul {
+        padding-left: 1.25rem;
+        margin: 0 0 1rem 0;
+      }
+      main ul li::marker {
+        content: "◆ ";
+        color: var(--accent);
+        font-size: 1.05em;
+      }
+      main ul li {
+        padding-left: 0.25rem;
+      }
+      /* Override marker content to avoid encoding issues */
+      main ul li::marker { content: "\25C6 "; }
+
+      /* Contact block */
+      address {
+        font-style: normal;
+        background: color-mix(in lab, var(--surface) 80%, black 0%);
+        border-left: 4px solid var(--accent);
+        padding: 0.75rem 1rem;
+        border-radius: 0.5rem;
+        color: var(--text);
+      }
+      address a { color: var(--accent); }
+
+      a {
+        color: var(--accent);
+        text-underline-offset: 0.15em;
+        text-decoration-thickness: 2px;
+      }
+      a:hover {
+        filter: brightness(1.1);
+      }
+
+      footer {
+        background: var(--surface);
+        border-top: 1px solid #415a77;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+      footer p {
+        margin: 0.25rem 0;
+      }
+
+      /* divider */
+      hr { border: none; border-top: 1px solid #415a77; margin: 1.25rem 0; }
+
+      /* Respect reduced motion */
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation: none;
+          transition: none;
+          scroll-behavior: auto;
+        }
+      }
+    </style>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header>
+      <div class="wrap">
+        <!--
+          Logo: images/jbdc-logo.svg
+        -->
+        <img src="../images/jbdc-logo.svg" alt="JBDC logo" width="150" height="150" decoding="async" />
+        <h1>Jamison Bedell Design Co.</h1>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="wrap">
+        <h2>Jamison Bedell Design Co. Services</h2>
+        <p class="intro">
+          We make absolutely awful websites. Do you want a website made by a backend focused college student
+          who really doesn't like webdev? Then you are in the right place my friend.
+          The website we make you will be bad, but it will be cheap!
+        </p>
+
+        <ul>
+          <li>I can make a logo in google docs for you.</li>
+          <li>Responsive websites that will look fine at best</li>
+          <li>Slow customer response times, I will likely not listen to what you want.</li>
+          <li>It will load pretty fast so thats cool</li>
+          <li>Content design that comes straight from the late 90's</li>
+          <li>I will put backdoors on your website.</li>
+          <li>I will be very blunt with you. You shouldn't hire me unless you are really desperate.</li>
+        </ul>
+
+        <p>
+          Ready to collaborate?
+          we might help if I feel like it.
+        </p>
+
+        <hr />
+
+        <address>
+          Jamison Bedell Design Co.<br />
+          15738 Chipping Drive<br />
+          Charlotte, NC 28078<br />
+          <a href="mailto:hello@jbdc.example">JamisonBedellDesignCo@gmail.com</a> ·
+          <a href="tel:+17043026797">(704) 302 6797</a>
+        </address>
+      </div>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <p><strong>Tagline:</strong> Striving for the mediocre</p>
+        <p>© 2025 Jamison Bedell Design Co.</p>
+      </div>
+    </footer>
+  </body>
+  </html>
