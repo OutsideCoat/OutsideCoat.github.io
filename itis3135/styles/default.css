@@ -1,4 +1,4 @@
-/* styles/default.css */
+﻿/* styles/default.css */
 
 /* General page styling */
 html, body {
@@ -12,9 +12,9 @@ body {
   color: #222;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;   
-  align-items: center;           
-  text-align: center;           
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
   min-height: 100vh;
 }
 
@@ -33,30 +33,35 @@ h2 {
 
 /* Navigation links */
 nav a {
-  color: #006699; 
+  color: #006699;
   text-decoration: none;
   margin: 0 5px;
 }
 
 nav a:hover {
-  color: #cc3300; 
+  color: #cc3300;
   text-decoration: underline;
+}
+
+header .tagline {
+  margin-top: 0.6rem;
+  font-size: 0.95em;
+  color: #444;
 }
 
 /* Layout */
 header, footer {
-  width: 100%;         
-  flex: 0 0 auto;       
+  width: 100%;
+  flex: 0 0 auto;
 }
 
-
 main {
-  flex: 0 0 auto;        
+  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-block: auto;    
+  margin-block: auto;
 }
 
 /* Footer */
@@ -82,8 +87,8 @@ footer {
 
 /* Headshot image styling */
 img {
-  max-width: 250px;  
-  height: auto;      
+  max-width: 250px;
+  height: auto;
   display: block;
   margin: 10px 0;
 }
@@ -93,8 +98,9 @@ img {
   margin: 0.5rem auto 0.75rem;
   text-align: center;
 }
+
 .profile-figure figcaption {
-  font-style: italic;   
+  font-style: italic;
   margin-top: 0.2rem;
 }
 

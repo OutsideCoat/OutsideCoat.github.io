@@ -1,0 +1,113 @@
+﻿
+
+:root {
+  --ink: #1f2a44;
+  --sky: #ecf2f8;
+  --midnight: #2b3a67;
+  --accent: #f6a630;
+}
+
+body {
+  margin: 0;
+  font-family: "Merriweather", "Georgia", serif;
+  background: var(--sky);
+  color: var(--ink);
+  text-align: center;
+}
+
+header,
+footer {
+  background: var(--midnight);
+  color: #f7faff;
+  padding: 1.6rem 1rem;
+}
+
+.site-title {
+  margin: 0;
+  font-family: "Montserrat", "Trebuchet MS", sans-serif;
+  font-size: 1.7rem;
+  letter-spacing: 0.05em;
+}
+
+nav {
+  margin-top: 0.75rem;
+}
+
+nav a {
+  color: #f7faff;
+  text-decoration: none;
+  margin: 0 0.35rem;
+  font-family: "Montserrat", "Trebuchet MS", sans-serif;
+  font-weight: 600;
+}
+
+nav a:hover,
+nav a:focus {
+  text-decoration: underline;
+}
+
+.tagline {
+  margin: 0.7rem 0 0;
+  font-size: 1rem;
+  font-style: italic;
+  font-family: "Merriweather", "Georgia", serif;
+}
+
+main {
+  max-width: 760px;
+  margin: 2.5rem auto;
+  padding: 1.75rem 1.5rem;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 8px 22px rgba(31, 42, 68, 0.14);
+  text-align: left;
+}
+
+.page-heading {
+  margin-top: 0;
+  color: var(--midnight);
+  font-family: "Playfair Display", "Times New Roman", serif;
+  font-size: 2rem;
+}
+
+p,
+ul,
+li {
+  line-height: 1.65;
+  font-size: 1.05rem;
+}
+
+.placeholder-box {
+  border-left: 4px solid var(--accent);
+  background: linear-gradient(135deg, rgba(246, 166, 48, 0.15), rgba(236, 242, 248, 0.7));
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  margin: 1.5rem 0;
+}
+
+footer nav {
+  margin-top: 0;
+}
+
+footer p {
+  margin: 0.4rem 0 0;
+  font-size: 0.9rem;
+  font-family: "Montserrat", "Trebuchet MS", sans-serif;
+}
+
+@media (max-width: 640px) {
+  main {
+    margin: 1.5rem;
+    padding: 1.35rem;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    margin: 0.2rem 0;
+  }
+}
