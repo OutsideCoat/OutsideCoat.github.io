@@ -48,9 +48,10 @@
       header .wrap,
       main .wrap,
       footer .wrap {
-        max-width: 72ch;
-        margin: 0 auto;
-        padding: 1.25rem 1rem;
+      max-width: 1200px;
+      width: 95%;
+      margin: 0 auto;
+      padding: 1.25rem 1rem;
       }
 
       header .wrap {
@@ -89,6 +90,51 @@
       footer p { margin: 0.25rem 0; }
 
       hr { border: none; border-top: 1px solid #415a77; margin: 1.25rem 0; }
+
+      /* Tablet Rules */
+@media screen and (min-width: 641px) and (max-width: 980px) {
+  header .wrap,
+  main .wrap,
+  footer .wrap {
+    max-width: 95%;
+    width: 95%;
+  }
+  
+  h1 { font-size: 1.4rem; }
+  h2 { font-size: 1.2rem; }
+}
+
+/* Mobile Rules */
+@media screen and (max-width: 640px) {
+  header .wrap,
+  main .wrap,
+  footer .wrap {
+    width: 100%;
+    padding: 1rem 0.75rem;
+  }
+  
+  header .wrap {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  h1 { font-size: 1.3rem; }
+  
+  header img {
+    width: 120px;
+    height: 120px;
+  }
+}
+/* Laptop/Small Screen Rules */
+@media screen and (min-width: 981px) and (max-width: 1400px) {
+  header .wrap,
+  main .wrap,
+  footer .wrap {
+    max-width: 1000px;
+    width: 90%;
+  }
+}
+
 
       @media (prefers-reduced-motion: reduce) {
         * { animation: none; transition: none; scroll-behavior: auto; }
