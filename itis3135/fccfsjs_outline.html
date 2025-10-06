@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FCC Full Stack JavaScript Outline | Jamison Bedell</title>
+
+  <!-- Brand/site stylesheet -->
+  <link rel="stylesheet" href="styles/default.css" />
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+
+  <!-- Minimal page-scoped styles to demonstrate table elements accessibly and keep cells balanced -->
+  <style>
+    .wrap { max-width: 1100px; margin-inline: auto; padding: 1.25rem; }
+    .visually-hidden { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+    table.outline { width: 100%; border-collapse: collapse; table-layout: fixed; }
+    table.outline caption { caption-side: top; font-weight: 700; text-align: left; padding: .5rem 0; }
+    table.outline th, table.outline td { border: 1px solid var(--border, #334); vertical-align: top; padding: .65rem .7rem; }
+    table.outline thead th { background: var(--surface-2, #223); color: var(--text-on-surface, #eef); text-align: left; }
+    table.outline tfoot td { background: var(--surface-1, #1b263b); color: #dde; font-size: .95rem; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; font-size: .95em; }
+    .pill { display: inline-block; font-size: .8rem; padding: .15rem .5rem; border-radius: 999px; background: #223; color: #cfe; margin-right: .35rem; }
+    /* Balance long bullet lists inside cells */
+    .cols-2 { column-width: 18rem; column-gap: 1.25rem; }
+    .cols-2 ul { margin: 0; padding-left: 1.1rem; }
+    .cols-2 li { break-inside: avoid; margin: .15rem 0; }
+    /* Small screens: allow horizontal scroll */
+    .table-wrap { overflow-x: auto; }
+    .kicker { margin: .5rem 0 1rem; color: var(--muted, #89a); }
+    /* Optional zebra for readability */
+    tbody tr:nth-child(odd) td { background: rgba(255,255,255,.02); }
+  </style>
+</head>
+<body>
+  <!-- Dynamic header include (adjust path to match your setup) -->
+  <div data-include="components/header.html"></div>
+
+  <main class="wrap">
+    <h1>FCC Full Stack JavaScript Outline</h1>
+    <p class="kicker"><em>Guiding policy with a gentle roar.</em> This page summarizes the FreeCodeCamp Full Stack Developer — JavaScript track in a compact, balanced table.</p>
+
+    <div class="table-wrap" aria-describedby="tbl-desc">
+      <p id="tbl-desc" class="visually-hidden">
+        The table lists curriculum areas &rarr; modules &rarr; items, grouped into lectures, workshops/labs, and reviews/quizzes.
+        Long lists are split into balanced columns for readability.
+      </p>
+
+      <table class="outline" id="fcc-js-outline">
+        <caption>JavaScript Track (<span class="mono">"dashedName": "javascript"</span>)</caption>
+
+        <!-- Column sizing via colgroup -->
+        <colgroup>
+          <col style="width: 16ch;" />
+          <col style="width: 22ch;" />
+          <col />
+          <col />
+          <col style="width: 18ch;" />
+        </colgroup>
+
+        <thead>
+          <tr>
+            <th id="h-area" scope="col">Area</th>
+            <th id="h-module" scope="col">Module</th>
+            <th id="h-lect" scope="col">Lectures</th>
+            <th id="h-work" scope="col">Workshops / Labs</th>
+            <th id="h-assess" scope="col">Reviews / Quizzes</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <!-- Code Editors -->
+          <tr>
+            <th scope="row" headers="h-area">Core JS</th>
+            <td headers="h-module h-area"><span class="pill mono">code-editors</span> Code Editors</td>
+            <td headers="h-lect h-module h-area" class="cols-2">
+              <ul>
+                <li>lecture — working with code editors and IDEs</li>
+              </ul>
+            </td>
+            <td headers="h-work h-module h-area"><em>—</em></td>
+            <td headers="h-assess h-module h-area"><em>—</em></td>
+          </tr>
+
+          <!-- Variables & Strings (combined and balanced) -->
+          <tr>
+            <th scope="row" headers="h-area">Core JS</th>
+            <td headers="h-module h-area"><span class="pill mono">javascript-variables-and-strings</span> Variables &amp; Strings</td>
+            <td headers="h-lect h-module h-area" class="cols-2">
+              <ul>
+                <li>lecture — introduction to JavaScript</li>
+                <li>lecture — introduction to strings</li>
+                <li>lecture — understanding code clarity</li>
+                <li>lecture — working with data types</li>
+                <li>lecture — working with strings in JavaScript</li>
+                <li>lecture — working with string character methods</li>
+                <li>lecture — string search &amp; slice methods</li>
+                <li>lecture — string formatting methods</li>
+                <li>lecture — string modification methods</li>
+              </ul>
+            </td>
+            <td headers="h-work h-module h-area" class="cols-2">
+              <ul>
+                <li>workshop — greeting bot</li>
+                <li>lab — JavaScript trivia bot</li>
+                <li>lab — sentence maker</li>
+                <li>workshop — teacher chatbot</li>
+              </ul>
+            </td>
+            <td headers="h-assess h-module h-area">
+              <ul>
+                <li>review — variables &amp; data types</li>
+                <li>quiz — variables &amp; data types</li>
+                <li>review — strings</li>
+                <li>quiz — strings</li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- Booleans & Numbers + Comparisons/Conditionals (grouped for balance) -->
+          <tr>
+            <th scope="row" headers="h-area">Core JS</th>
+            <td headers="h-module h-area"><span class="pill mono">javascript-booleans-and-numbers</span> Booleans, Numbers &amp; Conditionals</td>
+            <td headers="h-lect h-module h-area" class="cols-2">
+              <ul>
+                <li>numbers &amp; arithmetic operators</li>
+                <li>operator behavior</li>
+                <li>comparison &amp; boolean operators</li>
+                <li>unary &amp; bitwise operators</li>
+                <li>conditional logic &amp; Math methods</li>
+                <li>numbers &amp; common number methods</li>
+                <li>understanding comparisons &amp; conditionals</li>
+              </ul>
+            </td>
+            <td headers="h-work h-module h-area" class="cols-2">
+              <ul>
+                <li>workshop — MathBot</li>
+                <li>lab — fortune teller</li>
+              </ul>
+            </td>
+            <td headers="h-assess h-module h-area">
+              <ul>
+                <li>review — math</li>
+                <li>quiz — math</li>
+                <li>review — comparisons &amp; conditionals</li>
+                <li>quiz — comparisons &amp; conditionals</li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- Functions -->
+          <tr>
+            <th scope="row" headers="h-area">Core JS</th>
+            <td headers="h-module h-area"><span class="pill mono">javascript-functions</span> Functions</td>
+            <td headers="h-lect h-module h-area">
+              <ul><li>lecture — working with functions</li></ul>
+            </td>
+            <td headers="h-work h-module h-area" class="cols-2">
+              <ul>
+                <li>workshop — calculator</li>
+                <li>lab — boolean check</li>
+                <li>lab — email masker</li>
+                <li>workshop — loan qualification checker</li>
+                <li>lab — °C→°F converter</li>
+                <li>lab — counting cards</li>
+                <li>lab — leap year calculator</li>
+                <li>lab — truncate string</li>
+                <li>lab — string ending checker</li>
+              </ul>
+            </td>
+            <td headers="h-assess h-module h-area">
+              <ul>
+                <li>review — functions</li>
+                <li>quiz — functions</li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- Arrays -->
+          <tr>
+            <th scope="row" headers="h-area">Core JS</th>
+            <td headers="h-module h-area"><span class="pill mono">javascript-arrays</span> Arrays</td>
+            <td headers="h-lect h-module h-area">
+              <ul>
+                <li>lecture — working with arrays</li>
+                <li>lecture — common array methods</li>
+              </ul>
+            </td>
+            <td headers="h-work h-module h-area" class="cols-2">
+              <ul>
+                <li>workshop — shopping list</li>
+                <li>lab — lunch picker</li>
+                <li>lab — golf score translator</li>
+                <li>lab — reverse a string</li>
+              </ul>
+            </td>
+            <td headers="h-assess h-module h-area">
+              <ul>
+                <li>review — arrays</li>
+                <li>quiz — arrays</li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- Objects -->
+          <tr>
+            <th scope="row" headers="h-area">Core JS</th>
+            <td headers="h-module h-area"><span class="pill mono">javascript-objects</span> Objects</td>
+            <td headers="h-lect h-module h-area" class="cols-2">
+              <ul>
+                <li>intro to objects &amp; properties</li>
+                <li>working with JSON</li>
+                <li>optional chaining &amp; destructuring</li>
+              </ul>
+            </td>
+            <td headers="h-work h-module h-area" class="cols-2">
+              <ul>
+                <li>workshop — recipe tracker</li>
+                <li>lab — quiz game</li>
+                <li>lab — record collection</li>
+              </ul>
+            </td>
+            <td headers="h-assess h-module h-area">
+              <ul>
+                <li>review — objects</li>
+                <li>quiz — objects</li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- Loops -->
+          <tr>
+            <th scope="row" headers="h-area">Core JS</th>
+            <td headers="h-module h-area"><span class="pill mono">javascript-loops</span> Loops</td>
+            <td headers="h-lect h-module h-area">
+              <ul><li>lecture — working with loops</li></ul>
+            </td>
+            <td headers="h-work h-module h-area" class="cols-2">
+              <ul>
+                <li>workshop — sentence analyzer</li>
+                <li>lab — longest word in a string</li>
+                <li>lab — factorial calculator</li>
+                <li>lab — mutations</li>
+                <li>lab — chunky monkey</li>
+                <li>lab — profile lookup</li>
+                <li>lab — repeat a string</li>
+                <li>lab — missing letter detector</li>
+              </ul>
+            </td>
+            <td headers="h-assess h-module h-area">
+              <ul>
+                <li>review — loops</li>
+                <li>quiz — loops</li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- Review: Fundamentals (condensed but balanced) -->
+          <tr>
+            <th scope="row" headers="h-area">Core JS</th>
+            <td headers="h-module h-area"><span class="pill mono">review-javascript-fundamentals</span> JS Fundamentals (Review)</td>
+            <td headers="h-lect h-module h-area" class="cols-2">
+              <ul>
+                <li>types &amp; objects</li>
+                <li>arrays, variables, naming</li>
+                <li>code quality &amp; execution</li>
+                <li>the <span class="mono">var</span> keyword &amp; hoisting</li>
+                <li>modules, imports &amp; exports</li>
+                <li>arguments object &amp; rest params</li>
+              </ul>
+            </td>
+            <td headers="h-work h-module h-area" class="cols-2">
+              <ul>
+                <li>largest number finder</li>
+                <li>first element finder</li>
+                <li>slice &amp; splice</li>
+                <li>pyramid generator</li>
+                <li>gradebook app</li>
+                <li>title case converter</li>
+                <li>falsy remover</li>
+                <li>inventory management program</li>
+                <li>unique sorted union</li>
+                <li>password generator</li>
+                <li>sum all numbers</li>
+                <li>DNA pair generator</li>
+                <li>HTML entity converter</li>
+                <li>odd Fibonacci sum</li>
+                <li>optional-arguments sum</li>
+              </ul>
+            </td>
+            <td headers="h-assess h-module h-area">
+              <ul>
+                <li>review — fundamentals</li>
+                <li>quiz — fundamentals</li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- Higher-order functions -->
+          <tr>
+            <th scope="row" headers="h-area">Core JS</th>
+            <td headers="h-module h-area"><span class="pill mono">higher-order-functions-and-callbacks</span> Higher-Order Functions</td>
+            <td headers="h-lect h-module h-area">
+              <ul><li>lecture — HOFs &amp; callbacks</li></ul>
+            </td>
+            <td headers="h-work h-module h-area" class="cols-2">
+              <ul>
+                <li>workshop — library manager</li>
+                <li>lab — book organizer</li>
+                <li>lab — sorted index finder</li>
+                <li>lab — symmetric difference</li>
+                <li>lab — value remover</li>
+                <li>lab — matching object filter</li>
+                <li>lab — sum all primes</li>
+                <li>lab — range-based LCM</li>
+                <li>lab — deep flattening tool</li>
+                <li>lab — all-true property validator</li>
+              </ul>
+            </td>
+            <td headers="h-assess h-module h-area">
+              <ul>
+                <li>review — higher-order functions</li>
+                <li>quiz — higher-order functions</li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- DOM & Events -->
+          <tr>
+            <th scope="row" headers="h-area">Core JS</th>
+            <td headers="h-module h-area"><span class="pill mono">dom-manipulation-and-events</span> DOM &amp; Events</td>
+            <td headers="h-lect h-module h-area" class="cols-2">
+              <ul>
+                <li>DOM, click events &amp; Web APIs</li>
+                <li>event object &amp; delegation</li>
+              </ul>
+            </td>
+            <td headers="h-work h-module h-area" class="cols-2">
+              <ul>
+                <li>workshop — storytelling app</li>
+                <li>workshop — emoji reactor</li>
+                <li>lab — favorite icon toggler</li>
+                <li>workshop — music instrument filter</li>
+                <li>lab — real-time counter</li>
+                <li>lab — lightbox viewer</li>
+                <li>workshop — RPS game</li>
+                <li>lab — football team cards</li>
+              </ul>
+            </td>
+            <td headers="h-assess h-module h-area">
+              <ul>
+                <li>review — DOM &amp; click events</li>
+                <li>quiz — DOM &amp; click events</li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- JS a11y -->
+          <tr>
+            <th scope="row" headers="h-area">Core JS</th>
+            <td headers="h-module h-area"><span class="pill mono">js-a11y</span> JavaScript Accessibility</td>
+            <td headers="h-lect h-module h-area">
+              <ul>
+                <li>ARIA: expanded, live, common states</li>
+              </ul>
+            </td>
+            <td headers="h-work h-module h-area">
+              <ul>
+                <li>planets tablist</li>
+                <li>note-taking app</li>
+                <li>lab — theme switcher</li>
+              </ul>
+            </td>
+            <td headers="h-assess h-module h-area">
+              <ul>
+                <li>review — JS a11y</li>
+                <li>quiz — JS a11y</li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- Debugging -->
+          <tr>
+            <th scope="row" headers="h-area">Core JS</th>
+            <td headers="h-module h-area"><span class="pill mono">debugging-javascript</span> Debugging</td>
+            <td headers="h-lect h-module h-area">
+              <ul><li>lecture — debugging techniques</li></ul>
+            </td>
+            <td headers="h-work h-module h-area">
+              <ul><li>lab — random background color changer</li></ul>
+            </td>
+            <td headers="h-assess h-module h-area">
+              <ul>
+                <li>review — debugging</li>
+                <li>quiz — debugging</li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- Basic Regex -->
+          <tr>
+            <th scope="row" headers="h-area">Core JS</th>
+            <td headers="h-module h-area"><span class="pill mono">basic-regex</span> Regular Expressions</td>
+            <td headers="h-lect h-module h-area">
+              <ul><li>lecture — working with regular expressions</li></ul>
+            </td>
+            <td headers="h-work h-module h-area" class="cols-2">
+              <ul>
+                <li>workshop — spam filter</li>
+                <li>lab — palindrome checker</li>
+                <li>lab — markdown → HTML converter</li>
+                <li>lab — regex sandbox</li>
+                <li>lab — spinal case converter</li>
+                <li>lab — pig latin</li>
+                <li>lab — smart word replacement</li>
+              </ul>
+            </td>
+            <td headers="h-assess h-module h-area">
+              <ul>
+                <li>review — regex</li>
+                <li>quiz — regex</li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- Form Validation -->
+          <tr>
+            <th scope="row" headers="h-area">Core JS</th>
+            <td headers="h-module h-area"><span class="pill mono">form-validation</span> Form Validation</td>
+            <td headers="h-lect h-module h-area">
+              <ul><li>lecture — understanding form validation</li></ul>
+            </td>
+            <td headers="h-work h-module h-area">
+              <ul>
+                <li>workshop — calorie counter</li>
+                <li>lab — customer complaint form</li>
+              </ul>
+            </td>
+            <td headers="h-assess h-module h-area">
+              <ul>
+                <li>review — form validation</li>
+                <li>quiz — form validation</li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- Dates -->
+          <tr>
+            <th scope="row" headers="h-area">Core JS</th>
+            <td headers="h-module h-area"><span class="pill mono">javascript-dates</span> JavaScript Dates</td>
+            <td headers="h-lect h-module h-area">
+              <ul><li>lecture — working with dates</li></ul>
+            </td>
+            <td headers="h-work h-module h-area">
+              <ul><li>lab — date conversion</li></ul>
+            </td>
+            <td headers="h-assess h-module h-area">
+              <ul>
+                <li>review — dates</li>
+                <li>quiz — dates</li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- Audio/Video, Maps/Sets, LocalStorage/CRUD, Classes, Recursion, FP, Async (condensed for balance) -->
+          <tr>
+            <th scope="row" headers="h-area">Core JS</th>
+            <td headers="h-module h-area"><span class="pill mono">audio-video / maps-sets / storage-crud / classes / recursion / FP / async</span></td>
+            <td headers="h-lect h-module h-area" class="cols-2">
+              <ul>
+                <li>audio &amp; video APIs</li>
+                <li>maps &amp; sets</li>
+                <li>client-side storage &amp; CRUD</li>
+                <li>classes &amp; <span class="mono">this</span></li>
+                <li>recursion &amp; call stack</li>
+                <li>functional programming</li>
+                <li>asynchronous programming</li>
+              </ul>
+            </td>
+            <td headers="h-work h-module h-area" class="cols-2">
+              <ul>
+                <li>music player • drum machine</li>
+                <li>plant nursery catalog • voting system</li>
+                <li>todo app • bookmark manager</li>
+                <li>shopping cart • project idea board • bank account manager</li>
+                <li>decimal→binary • permutation generator</li>
+                <li>recipe ingredient converter • sorting visualizer</li>
+                <li>FCC authors page • forum leaderboard • weather app</li>
+              </ul>
+            </td>
+            <td headers="h-assess h-module h-area">
+              <ul>
+                <li>review — per module</li>
+                <li>quiz — per module</li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- Frontend Libraries (React etc.) summary row to keep table balanced -->
+          <tr>
+            <th scope="row" headers="h-area">Front-end Libs</th>
+            <td headers="h-module h-area"><span class="pill mono">frontend-libraries</span> React &amp; More</td>
+            <td headers="h-lect h-module h-area" class="cols-2">
+              <ul>
+                <li>intro to libraries/frameworks</li>
+                <li>state, effects, refs</li>
+                <li>forms, data fetching, memoization</li>
+                <li>routing &amp; frameworks</li>
+                <li>performance, testing</li>
+                <li>CSS libraries &amp; Tailwind</li>
+              </ul>
+            </td>
+            <td headers="h-work h-module h-area" class="cols-2">
+              <ul>
+                <li>mega navbar • reusable footer</li>
+                <li>profile card • mood board</li>
+                <li>toggle text • color picker • fruit search</li>
+                <li>shopping list • currency converter • OTP</li>
+                <li>superhero form • event RSVP</li>
+                <li>Tailwind CTA • pricing • error message</li>
+              </ul>
+            </td>
+            <td headers="h-assess h-module h-area">
+              <ul>
+                <li>review — React basics</li>
+                <li>quiz — React basics</li>
+                <li>review — forms/data/routing</li>
+                <li>quizzes — performance/testing/CSS libs</li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- Other tracks noted (Python, Relational DBs, Backend JS, Career) -->
+          <tr>
+            <th scope="row" headers="h-area">Other Tracks</th>
+            <td headers="h-module h-area"><span class="pill mono">python / relational-databases / backend-javascript / career</span></td>
+            <td headers="h-lect h-module h-area">
+              <ul>
+                <li>Python basics, loops, dicts/sets, error handling</li>
+                <li>Relational DBs, SQL + Bash, Git</li>
+                <li>Node, Express, WebSockets, Security, Auth</li>
+                <li>Career &amp; capstone</li>
+              </ul>
+            </td>
+            <td headers="h-work h-module h-area">
+              <ul>
+                <li>assorted labs/workshops per module</li>
+              </ul>
+            </td>
+            <td headers="h-assess h-module h-area">
+              <ul>
+                <li>reviews/quizzes per module</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+
+        <tfoot>
+          <tr>
+            <td colspan="5">
+              <strong>Notes:</strong> This outline follows the provided FCC structure. Items are grouped to keep cells balanced and scannable.
+              Use this as a planning guide—individual module availability may vary.
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <!-- 4-week schedule + acknowledgment block -->
+    <section aria-labelledby="sched">
+      <h2 id="sched">My 4-Week Plan &amp; Acknowledgment</h2>
+      <p><strong>I, Jamison Bedell,</strong> intend to finish the freeCodeCamp Full Stack Developer JavaScript section over the next <strong>6 weeks</strong> (accounting for pace and existing coursework), according to the following general schedule:</p>
+      <ul>
+        <li><strong>Week 1:</strong> Code Editor; Variables &amp; Strings</li>
+        <li><strong>Week 2:</strong> Booleans &amp; Numbers; Comparisons &amp; Conditionals; Debugging</li>
+        <li><strong>Week 3:</strong> Functions; Arrays; Objects</li>
+        <li><strong>Week 4:</strong> Loops; Fundamentals Review; Basic Regex</li>
+        <li><strong>Week 5:</strong> DOM &amp; Events; JS a11y; Form Validation; Dates</li>
+        <li><strong>Week 6:</strong> Audio/Video; Maps/Sets; LocalStorage/CRUD; Classes; Recursion; Functional Programming; Async; Front-end Libraries review &amp; quizzes</li>
+      </ul>
+      <p>I acknowledge this is a single assignment in the course (not broken into parts like the previous certification) and I’ll pace myself accordingly.</p>
+      <p><em>Jamison Bedell,</em> <!-- Today’s date; update if needed --> October 6, 2025</p>
+    </section>
+  </main>
+
+  <!-- Dynamic footer include -->
+  <div data-include="components/footer.html"></div>
+
+  <!-- HTMLInclude (or your chosen include script) -->
+  <script src="scripts/htmlinclude.js" defer></script>
+</body>
+</html>
+
+
+
+
+
