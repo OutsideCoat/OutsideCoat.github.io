@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hobby Template Hub</title>
+    <style>
+      :root {
+        --background: #181f36;
+        --surface: #24324f;
+        --surface-alt: #2f4265;
+        --accent: #f18f01;
+        --accent-soft: #f1c27d;
+        --text-primary: #f6f7fb;
+        --text-secondary: #c9d2e9;
+        --divider: #f6f7fb;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+        background: radial-gradient(circle at top, var(--surface-alt) 0%, var(--background) 60%);
+        color: var(--text-primary);
+        display: flex;
+        flex-direction: column;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: none;
+        transition: color 0.2s ease, transform 0.2s ease;
+      }
+
+      a:hover,
+      a:focus {
+        color: var(--accent-soft);
+        transform: translateY(-1px);
+      }
+
+      header {
+        background: rgba(24, 31, 54, 0.92);
+        border-bottom: 4px solid var(--accent);
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+      }
+
+      .site-header {
+        margin: 0 auto;
+        max-width: 1100px;
+        padding: 1.5rem 1rem 1rem;
+        display: grid;
+        gap: 0.75rem;
+      }
+
+      .site-title {
+        margin: 0;
+        font-size: clamp(2rem, 4vw, 2.75rem);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .nav-link {
+        padding: 0.4rem 0.8rem;
+        border-radius: 999px;
+        background: rgba(36, 50, 79, 0.85);
+        border: 1px solid transparent;
+        font-weight: 600;
+        letter-spacing: 0.07em;
+      }
+
+      .nav-link:focus-visible {
+        outline: 3px solid var(--accent-soft);
+        outline-offset: 2px;
+      }
+
+      .nav-link[data-active="true"] {
+        background: var(--accent);
+        color: #1d1c1c;
+      }
+
+      .nav-divider {
+        color: var(--divider);
+        font-size: 1.2rem;
+        line-height: 1;
+        padding: 0 0.25rem;
+      }
+
+      main {
+        flex: 1;
+      }
+
+      .content-wrapper {
+        margin: 0 auto;
+        padding: 2.5rem 1.25rem 3rem;
+        max-width: 1100px;
+        display: grid;
+        gap: 2.5rem;
+      }
+
+      section {
+        background: rgba(34, 46, 71, 0.9);
+        border-radius: 28px;
+        padding: 2rem;
+        display: none;
+        gap: 1.5rem;
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+      }
+
+      section[data-active="true"] {
+        display: grid;
+      }
+
+      .section-heading {
+        margin: 0;
+        font-size: clamp(1.8rem, 3.2vw, 2.25rem);
+        color: var(--accent-soft);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+      }
+
+      .section-intro {
+        margin: 0;
+        line-height: 1.8;
+        color: var(--text-secondary);
+        background: rgba(15, 21, 38, 0.5);
+        padding: 1rem 1.25rem;
+        border-radius: 18px;
+        border: 1px dashed rgba(241, 143, 1, 0.5);
+      }
+
+      .feature-panel {
+        border-radius: 22px;
+        background: rgba(18, 24, 39, 0.65);
+        padding: 1.5rem;
+        border: 1px solid rgba(241, 143, 1, 0.4);
+        display: grid;
+        gap: 0.75rem;
+      }
+
+      .feature-title {
+        margin: 0;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--accent-soft);
+      }
+
+      figure {
+        margin: 0;
+        display: grid;
+        gap: 0.6rem;
+        background: rgba(24, 31, 54, 0.55);
+        padding: 1.1rem;
+        border-radius: 20px;
+        border: 1px solid rgba(241, 143, 1, 0.35);
+      }
+
+      figure img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        max-height: 320px;
+        object-fit: contain;
+        border-radius: 16px;
+        box-shadow: 0 0 0 4px rgba(241, 143, 1, 0.35);
+        background: rgba(29, 28, 28, 0.3);
+        margin: 0 auto;
+        justify-self: center;
+      }
+
+      figcaption {
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        color: var(--accent-soft);
+        display: grid;
+        gap: 0.35rem;
+      }
+
+      figcaption span {
+        margin: 0;
+      }
+
+      figcaption em {
+        color: var(--text-secondary);
+        font-weight: 400;
+      }
+
+      .feature-list {
+        margin: 0;
+        padding-left: 1.25rem;
+        color: var(--text-secondary);
+        line-height: 1.7;
+      }
+
+      footer {
+        background: rgba(15, 21, 38, 0.92);
+        border-top: 3px solid var(--accent);
+      }
+
+      .site-footer {
+        margin: 0 auto;
+        max-width: 1100px;
+        padding: 1.25rem 1rem 1.75rem;
+        display: grid;
+        gap: 0.75rem;
+        text-align: center;
+        color: var(--text-secondary);
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 700px) {
+        nav {
+          justify-content: center;
+        }
+
+        .nav-divider {
+          display: none;
+        }
+
+        section {
+          padding: 1.5rem;
+        }
+      }
+    </style>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <div class="site-header">
+        <h1 class="site-title">Headphones and Audio!</h1>
+        <nav aria-label="Section navigation">
+          <a class="nav-link" href="#what" data-panel-target="what" data-active="true">What</a>
+          <span class="nav-divider" aria-hidden="true">&#10024;</span>
+          <a class="nav-link" href="#who" data-panel-target="who">Who</a>
+          <span class="nav-divider" aria-hidden="true">&#10024;</span>
+          <a class="nav-link" href="#when" data-panel-target="when">When</a>
+          <span class="nav-divider" aria-hidden="true">&#10024;</span>
+          <a class="nav-link" href="#where" data-panel-target="where">Where</a>
+          <span class="nav-divider" aria-hidden="true">&#10024;</span>
+          <a class="nav-link" href="#how" data-panel-target="how">How</a>
+          <span class="nav-divider" aria-hidden="true">&#10024;</span>
+          <a class="nav-link" href="#why" data-panel-target="why">Why</a>
+          <span class="nav-divider" aria-hidden="true">&#10024;</span>
+          <a class="nav-link" href="#ai-prompts" data-panel-target="ai-prompts">AI Prompts</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="content-wrapper">
+        <section id="what" class="panel" data-panel="what" data-active="true">
+          <h2 class="section-heading">What does the audio world entail?</h2>
+          <p class="section-intro">Taking an interest in audio or as some call it, being an "audiophile", inolves a deep interest in not just sound quality but the gear that produces it. Audiophiles chase a faithful reproduction of recorded music/sounds that are made and mastered by audio engineers. It's all about chasing the perfect conditions in which the audio was supposed to be heard.</p>
+          <figure>
+            <img src="images/whatheadphones.png" alt="Openback headphones on a desk" />
+            <figcaption>
+              <span>Open-back headphones highlight detail, separation, and soundstage—perfect for late-night sessions.</span>
+              <em>photorealistic open‑back headphones on walnut desk, teal/orange accent lights, shallow depth of field, soft bokeh, 35mm lens</em>
+            </figcaption>
+          </figure>
+          <div class="feature-panel">
+            <h3 class="feature-title">Beginner information!</h3>
+            <ul class="feature-list">
+              <li>Hight fidelity or Hi-Fi audio makes sure the audio is clear and without harsh artifacts.</li>
+              <li>Example of an audio chain: source (files/streaming) -> DAC (digital to analog audio converter) -> Amplifier (provides clean power for the audio) -> transducer(headphones/speakers)</li>
+              <li>Files vs streams: use lossless (FLAC/ALAC) or high‑bitrate (AAC/OPUS 256–320 kbps) for consistent quality.</li>
+              <li>Bit depth/sample rate: 16‑bit/44.1 kHz is already excellent; higher rates rarely improve playback, mostly production.</li>
+            </ul>
+          </div>
+        </section>
+        <section id="who" class="panel" data-panel="who">
+          <h2 class="section-heading">Who am I and who is involved in this hobby?</h2>
+          <p class="section-intro">The audiophile community consists of a wide range of people. From vinyl lovers and IEM tinkerers to studio engineers and measurement-first reviewers. </p>
+          <figure>
+            <img src="images/whoheadphones.png" alt="Friends at a bar listening to each others headphones" />
+            <figcaption>
+              <span>Comparing gear with friends sharpens your ears and reveals preferences faster than solo listening</span>
+              <em>cozy headphone listening bar, diverse people trying gear, warm lamplight, candid composition, realistic</em>
+            </figcaption>
+          </figure>
+          <div class="feature-panel">
+            <h3 class="feature-title">About me and more resources</h3>
+            <ul class="feature-list">
+              <li>I am more of a casual audiophile, I got into this hobby around 3 years ago and have a wide range of headphones. I prefer a neutral sound with minimal EQ. My current daily driver headphone is the Focal Elex</li>
+              <li>Visit some audiophile websites! A lot of good information can be found on reddit such as r/headphones and r/audiophile </li>
+              <li>Famous headphone reviewers like Crinacle or the good folks at headphones.com are much more experienced than me. Check them out!</li>
+            </ul>
+          </div>
+        </section>
+        <section id="when" class="panel" data-panel="when">
+          <h2 class="section-heading">When?</h2>
+          <p class="section-intro">You can do this hobby whenever you want! I like to just sitdown in the evening and put on some high fidelity music to relax and take in the sound. As long as you are courteous of others, there is no wrong time to engage in the hobby.</p>
+          <figure>
+            <img src="images/whenheadphones.png" alt="Placeholder visual representing timing or schedules." />
+            <figcaption>
+              <span>Settle down at a cozy time and relax with some good tunes.</span>
+              <em>sunset audiophile desk with a digital clock that says 7:00 pm, ambient LED light, moody cinematic look, photoreal</em>
+            </figcaption>
+          </figure>
+          <div class="feature-panel">
+            <h3 class="feature-title">My ideal times:</h3>
+            <ul class="feature-list">
+              <li>During the quiet hours</li>
+              <li>When you have your other activities for the day completed</li>
+              <li>Weekends</li>
+            </ul>
+          </div>
+        </section>
+        <section id="where" class="panel" data-panel="where">
+          <h2 class="section-heading">Where to listen and tinker? Where should I buy headphones?</h2>
+          <p class="section-intro">Great listening happens in comfortable, acoustically considered spaces. Local hi‑fi shops and meetups let you audition gear safely; go to forums that keep the community engaged with each other.</p>
+          <figure>
+            <img src="images/template-placeholder.svg" alt="Placeholder visual depicting a location for the hobby." />
+            <figcaption>
+              <span>[Caption tying the image to a specific place or setting.]</span>
+              <em>A screenshot of headphones.com</em>
+            </figcaption>
+          </figure>
+          <div class="feature-panel">
+            <h3 class="feature-title">Go to these reputable websites to buy and learn more!</h3>
+            <ul class="feature-list">
+              <li><a href="https://headphones.com"> Headphones.com</a></li>
+              <li><a href="https://www.reddit.com/r/audiophile/"> r/audiophiles</a></li>
+              <li><a href="https://www.reddit.com/r/audiophile/wiki/guide/"> Audiophile resource guide on reddit.</a></li>
+            </ul>
+          </div>
+        </section>
+        <section id="how" class="panel" data-panel="how">
+          <h2 class="section-heading">How To Get Started</h2>
+          <p class="section-intro">[Provide an overview of the steps, materials, or skills needed.]</p>
+          <figure>
+            <img src="images/template-placeholder.svg" alt="Placeholder visual outlining how to participate." />
+            <figcaption>
+              <span>[Caption guiding visitors through the process.]</span>
+              <em>[State the AI prompt or method used to create this image.]</em>
+            </figcaption>
+          </figure>
+          <div class="feature-panel">
+            <h3 class="feature-title">Action Plan</h3>
+            <ul class="feature-list">
+              <li>[Step one or foundational action item.]</li>
+              <li>[Resources, gear, or tools to gather.]</li>
+              <li>[Practice ideas to build momentum.]</li>
+            </ul>
+          </div>
+        </section>
+        <section id="why" class="panel" data-panel="why">
+          <h2 class="section-heading">Why It Matters</h2>
+          <p class="section-intro">[Explain the personal or community impact of the hobby.]</p>
+          <figure>
+            <img src="images/template-placeholder.svg" alt="Placeholder visual showing the impact of the hobby." />
+            <figcaption>
+              <span>[Caption articulating the emotional or practical benefits.]</span>
+              <em>[Detail the AI prompt or origin for this supportive image.]</em>
+            </figcaption>
+          </figure>
+          <div class="feature-panel">
+            <h3 class="feature-title">Key Takeaways</h3>
+            <ul class="feature-list">
+              <li>[Personal growth or wellness outcomes.]</li>
+              <li>[Community or social advantages.]</li>
+              <li>[Long-term goals or aspirations.]</li>
+            </ul>
+          </div>
+        </section>
+        <section id="ai-prompts" class="panel" data-panel="ai-prompts">
+          <h2 class="section-heading">AI Prompts & Credits</h2>
+          <p class="section-intro">[Collect the AI prompts, attributions, or references connected to your images and content.]</p>
+          <figure>
+            <img src="images/template-placeholder.svg" alt="Placeholder visual for AI prompt documentation." />
+            <figcaption>
+              <span>[Caption connecting the artwork to its prompt or source.]</span>
+              <em>[Summarize how the AI prompt generated this image or note if the image was sourced elsewhere.]</em>
+            </figcaption>
+          </figure>
+          <div class="feature-panel">
+            <h3 class="feature-title">Documentation Checklist</h3>
+            <ol class="feature-list">
+              <li>[Paste prompt text or describe manual edits.]</li>
+              <li>[List the AI tool or resource utilized.]</li>
+              <li>[Record licensing or attribution requirements.]</li>
+            </ol>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="site-footer">
+        <p>Template crafted for future customization. Update content, imagery, and prompts before publishing.</p>
+        <p>
+          Site concept by
+          <a href="../jamisonbedelldesign.com/index.html">Jamison Bedell Design Co.</a>
+        </p>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const navLinks = document.querySelectorAll(".nav-link");
+        const panels = document.querySelectorAll(".panel");
+
+        const updatePanelVisibility = (panelId) => {
+          panels.forEach((panel) => {
+            const isActive = panel.dataset.panel === panelId;
+            panel.setAttribute("data-active", isActive ? "true" : "false");
+          });
+
+          navLinks.forEach((link) => {
+            const isCurrent = link.dataset.panelTarget === panelId;
+            link.setAttribute("data-active", isCurrent ? "true" : "false");
+          });
+        };
+
+        navLinks.forEach((link) => {
+          link.addEventListener("click", (event) => {
+            event.preventDefault();
+            const targetPanel = link.dataset.panelTarget;
+            if (targetPanel) {
+              updatePanelVisibility(targetPanel);
+              history.replaceState(null, "", `#${targetPanel}`);
+            }
+          });
+        });
+
+        const initialPanel = window.location.hash.replace("#", "") || "what";
+        const validPanelIds = Array.from(panels).map((panel) => panel.dataset.panel);
+        updatePanelVisibility(validPanelIds.includes(initialPanel) ? initialPanel : "what");
+      });
+    </script>
+  </body>
+</html>
