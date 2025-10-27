@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ITIS3135 | Jamison Bedell | Jolly Bear | Introduction Form</title>
+  <link rel="stylesheet" href="styles/default.css">
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div data-include="components/header.html"></div>
+
+  <main id="intro-form">
+    <h2>Introduction Form</h2>
+    <h3>Please submit the form below.</h3>
+
+    <form id="introduction-form" novalidate>
+      <fieldset>
+        <legend>Basic Information</legend>
+        <div class="form-row">
+          <label for="firstName">First Name*</label>
+          <input type="text" id="firstName" name="firstName" placeholder="First name" value="Jamison" required>
+        </div>
+        <div class="form-row">
+          <label for="middleName">Middle Name / Initial</label>
+          <input type="text" id="middleName" name="middleName" placeholder="Middle name or initial" value="C.">
+        </div>
+        <div class="form-row">
+          <label for="nickname">Nickname / Preferred Name</label>
+          <input type="text" id="nickname" name="nickname" placeholder="Nickname" value="Jamie">
+        </div>
+        <div class="form-row">
+          <label for="lastName">Last Name*</label>
+          <input type="text" id="lastName" name="lastName" placeholder="Last name" value="Bedell" required>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Acknowledgment</legend>
+        <div class="form-row">
+          <label for="ackStatement">Acknowledgment Statement*</label>
+          <input type="text" id="ackStatement" name="ackStatement" placeholder="I acknowledge that information posted here is public." value="I acknowledge that information posted here is public." required>
+        </div>
+        <div class="form-row">
+          <label for="ackInitials">Initials*</label>
+          <input type="text" id="ackInitials" name="ackInitials" placeholder="Initials" value="JB" required>
+        </div>
+        <div class="form-row">
+          <label for="ackDate">Acknowledgment Date* <span class="field-hint">(YYYY-MM-DD)</span></label>
+          <input type="text" id="ackDate" name="ackDate" placeholder="2025-09-04" value="2025-09-04" pattern="\d{4}-\d{2}-\d{2}" title="Enter date as YYYY-MM-DD" required>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Mascot & Display</legend>
+        <div class="form-row">
+          <label for="mascotAdjective">Mascot Adjective*</label>
+          <input type="text" id="mascotAdjective" name="mascotAdjective" placeholder="Adjective (e.g., Jolly)" value="Jolly" required>
+        </div>
+        <div class="form-row">
+          <label for="mascotAnimal">Mascot Animal*</label>
+          <input type="text" id="mascotAnimal" name="mascotAnimal" placeholder="Animal (e.g., Bear)" value="Bear" required>
+        </div>
+        <div class="form-row">
+          <label for="divider">Divider*</label>
+          <input type="text" id="divider" name="divider" placeholder="~" value="~" required>
+        </div>
+        <div class="form-row">
+          <label for="personalStatement">Personal Statement</label>
+          <textarea id="personalStatement" name="personalStatement" placeholder="Short personal statement"></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Profile Image</legend>
+        <div class="form-row">
+          <label for="pictureUrl">Picture URL*</label>
+          <input type="url" id="pictureUrl" name="pictureUrl" placeholder="https://example.com/image.jpg" value="https://outsidecoat.github.io/itis3135/images/headshot.jpg" required>
+        </div>
+        <div class="form-row">
+          <label for="pictureUpload">Or Upload Image</label>
+          <input type="file" id="pictureUpload" name="pictureUpload" accept="image/*">
+        </div>
+        <div class="form-row">
+          <label for="pictureAlt">Image Alt Text*</label>
+          <input type="text" id="pictureAlt" name="pictureAlt" placeholder="Alt text for the image" value="Jamison Bedell headshot" required>
+        </div>
+        <div class="form-row">
+          <label for="pictureCaption">Picture Caption*</label>
+          <input type="text" id="pictureCaption" name="pictureCaption" placeholder="Caption for the image" value="At the Renaissance Festival in 2024" required>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Background Details</legend>
+        <div class="form-row">
+          <label for="personalBackground">Personal Background*</label>
+          <textarea id="personalBackground" name="personalBackground" placeholder="Personal background" required>I was born in charlotte, I mostly just do my own thing! I like to hang out with my partner, tinker with computers, play games.</textarea>
+        </div>
+        <div class="form-row">
+          <label for="professionalBackground">Professional Background*</label>
+          <textarea id="professionalBackground" name="professionalBackground" placeholder="Professional background" required>Haven't done much professionally, worked for a non profit as a lab tech when I was in high school.</textarea>
+        </div>
+        <div class="form-row">
+          <label for="academicBackground">Academic Background*</label>
+          <textarea id="academicBackground" name="academicBackground" placeholder="Academic background" required>CS major at UNC Charlotte. Concentration in cybersecurity. This is my third year here.</textarea>
+        </div>
+        <div class="form-row">
+          <label for="subjectBackground">Background in this Subject*</label>
+          <textarea id="subjectBackground" name="subjectBackground" placeholder="Background in this subject" required>I have some HTML experience, I like to make my own websites and such so I'd imagine I have an intermediate understanding. I can do a lot I believe.</textarea>
+        </div>
+        <div class="form-row">
+          <label for="computerPlatform">Primary Computer Platform*</label>
+          <input type="text" id="computerPlatform" name="computerPlatform" placeholder="Primary computer platform" value="Custom desktop, Windows 11, at-home workstation." required>
+        </div>
+        <div class="form-row">
+          <label for="funnyThing">Funny Thing</label>
+          <input type="text" id="funnyThing" name="funnyThing" placeholder="Something funny or interesting" value="My dad and I have the same initials!">
+        </div>
+        <div class="form-row">
+          <label for="extraShare">Something I'd like to share</label>
+          <textarea id="extraShare" name="extraShare" placeholder="Anything else you want to share"></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Courses</legend>
+        <div id="courseList"></div>
+        <button type="button" id="addCourseButton">Add Course</button>
+      </fieldset>
+
+      <fieldset>
+        <legend>Quote</legend>
+        <div class="form-row">
+          <label for="quote">Quote*</label>
+          <textarea id="quote" name="quote" placeholder="Favorite quote" required>"I'm not a fan of quotes. I don't like sounding pretentious"</textarea>
+        </div>
+        <div class="form-row">
+          <label for="quoteAuthor">Quote Author*</label>
+          <input type="text" id="quoteAuthor" name="quoteAuthor" placeholder="Quote author" value="Jamison Bedell" required>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Links</legend>
+        <div id="linkList">
+          <div class="link-row">
+            <label for="linkLabel1">Link 1 Label*</label>
+            <input type="text" id="linkLabel1" name="linkLabel1" placeholder="LinkedIn" value="LinkedIn" required>
+            <label for="linkUrl1">Link 1 URL*</label>
+            <input type="url" id="linkUrl1" name="linkUrl1" placeholder="https://www.linkedin.com/in/username" value="https://www.linkedin.com/in/jamisonbedell" required>
+          </div>
+          <div class="link-row">
+            <label for="linkLabel2">Link 2 Label*</label>
+            <input type="text" id="linkLabel2" name="linkLabel2" placeholder="GitHub" value="GitHub" required>
+            <label for="linkUrl2">Link 2 URL*</label>
+            <input type="url" id="linkUrl2" name="linkUrl2" placeholder="https://github.com/username" value="https://github.com/OutsideCoat" required>
+          </div>
+          <div class="link-row">
+            <label for="linkLabel3">Link 3 Label*</label>
+            <input type="text" id="linkLabel3" name="linkLabel3" placeholder="Portfolio" value="Portfolio" required>
+            <label for="linkUrl3">Link 3 URL*</label>
+            <input type="url" id="linkUrl3" name="linkUrl3" placeholder="https://www.example.com" value="https://jamisonbedelldesign.com" required>
+          </div>
+          <div class="link-row">
+            <label for="linkLabel4">Link 4 Label*</label>
+            <input type="text" id="linkLabel4" name="linkLabel4" placeholder="Bluesky" value="Bluesky" required>
+            <label for="linkUrl4">Link 4 URL*</label>
+            <input type="url" id="linkUrl4" name="linkUrl4" placeholder="https://www.example.com" value="https://bsky.app/profile/fakeaccountorsomethingidk" required>
+          </div>
+          <div class="link-row">
+            <label for="linkLabel5">Link 5 Label*</label>
+            <input type="text" id="linkLabel5" name="linkLabel5" placeholder="Favorite Resource" value="YouTube" required>
+            <label for="linkUrl5">Link 5 URL*</label>
+            <input type="url" id="linkUrl5" name="linkUrl5" placeholder="https://www.example.com" value="https://www.youtube.com/idkmanputayoutubechannelhere" required>
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="form-controls">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        <button type="button" id="clearButton">Clear</button>
+      </div>
+    </form>
+
+    <div id="generated-introduction" hidden></div>
+  </main>
+
+  <div data-include="components/footer.html"></div>
+
+  <template id="courseTemplate">
+    <div class="course-row">
+      <label>
+        Department*
+        <input type="text" name="courseDepartment" placeholder="ITIS" required>
+      </label>
+      <label>
+        Number*
+        <input type="text" name="courseNumber" placeholder="3135" required>
+      </label>
+      <label>
+        Name*
+        <input type="text" name="courseName" placeholder="Course Title" required>
+      </label>
+      <label>
+        Reason*
+        <input type="text" name="courseReason" placeholder="Reason for taking" required>
+      </label>
+      <button type="button" class="remove-course">Remove</button>
+    </div>
+  </template>
+
+  <script src="scripts/htmlinclude.js" defer></script>
+  <script src="scripts/introduction.js" defer></script>
+</body>
+</html>

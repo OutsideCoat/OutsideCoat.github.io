@@ -126,6 +126,11 @@ img {
   margin-top: 0.2rem;
 }
 
+.profile-figure img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Keep lists readable */
 .content-block {
   max-width: 800px;
@@ -159,4 +164,118 @@ img {
   margin-top: 1.2rem;
   text-align: center;
   font-size: 1.05em;
+}
+
+/* Form layout */
+#introduction-form form {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  text-align: left;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+legend {
+  font-weight: 600;
+  padding: 0 0.5rem;
+}
+
+.form-row,
+.course-row,
+.link-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin: 0.75rem 0;
+}
+
+.course-row {
+  padding: 0.75rem;
+  border: 1px dashed #bbb;
+  border-radius: 4px;
+  background-color: #fafafa;
+}
+
+.course-row .remove-course:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.form-row label,
+.course-row label,
+.link-row label {
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="url"],
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.field-hint {
+  font-weight: 400;
+  font-size: 0.85em;
+  color: #555;
+}
+
+.form-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.form-controls button {
+  padding: 0.6rem 1.2rem;
+  border: 1px solid #666;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.form-controls button:hover {
+  background-color: #e0e0e0;
+}
+
+#generated-introduction {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.reset-link {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.reset-link button {
+  padding: 0.6rem 1.1rem;
+  background-color: #006699;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.reset-link button:hover {
+  background-color: #004c73;
 }
